@@ -1,4 +1,4 @@
-<header id="main-header" class="main-header fixed-top" itemscope itemtype="http://schema.org/WebSite">
+<header id="main-header" class="main-header" itemscope itemtype="http://schema.org/WebSite">
 <nav class="navbar navbar-expand-lg navbar-dark" role="navigation" aria-label="<?php esc_attr_e( 'Main navigation', 'fc-oberwil' ); ?>">
 	<div class="custom-container">
 		<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg">
