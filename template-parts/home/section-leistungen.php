@@ -20,15 +20,15 @@
                     </div>
                 </div>
                 <div class="col-12 col-lg-6 section-leistungen__col-right" style="background:url('<?php echo wp_upload_dir()['url'] . '/bg_Leistungen.jpg' ?>') no-repeat;">
-                <ul>
-                    <?php
-                    if( have_rows('section_leistungen_menu_repeater') ):
-                    while( have_rows('section_leistungen_menu_repeater') ) : the_row(); ?>
-                    <li>
-                        <a href="<?php the_sub_field('menu_item'); ?>" class="section_leistungen_menu_list"><?php the_sub_field('menu_item'); ?></a>
-                    </li>
-                    <?php endwhile; endif; ?>
-                </ul>
+                    <ul>
+                        <?php
+                        if( have_rows('section_leistungen_menu_repeater') ):
+                        while( have_rows('section_leistungen_menu_repeater') ) : the_row(); ?>
+                        <li>
+                            <a href="<?php the_sub_field('menu_link'); ?>" class="section_leistungen_menu_list"><?php the_sub_field('menu_item'); ?></a>
+                        </li>
+                        <?php endwhile; endif; ?>
+                    </ul>
                 </div>
             </div>
         </div>

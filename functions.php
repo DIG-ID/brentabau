@@ -2,7 +2,7 @@
 /**
  * Setup theme
  */
-function hi_theme_setup() {
+function brn_theme_setup() {
 
 	register_nav_menus(
 		array(
@@ -26,12 +26,12 @@ function hi_theme_setup() {
 
 }
 
-add_action( 'after_setup_theme', 'hi_theme_setup' );
+add_action( 'after_setup_theme', 'brn_theme_setup' );
 
 /**
  * Register our sidebars and widgetized areas.
  */
-function hi_theme_footer_widgets_init() {
+function brn_theme_footer_widgets_init() {
 
 	register_sidebar(
 		array(
@@ -45,12 +45,12 @@ function hi_theme_footer_widgets_init() {
 	);
 
 }
-add_action( 'widgets_init', 'hi_theme_footer_widgets_init' );
+add_action( 'widgets_init', 'brn_theme_footer_widgets_init' );
 
 /**
  * Get font face styles.
  */
-function hi_get_font_face_styles() {
+function brn_get_font_face_styles() {
 
 	return "
 	@font-face {
@@ -68,17 +68,21 @@ function hi_get_font_face_styles() {
 /**
  * Enqueue styles and scripts
  */
-function hi_theme_enqueue_styles() {
+function brn_theme_enqueue_styles() {
 
 	//Get the theme data
-	$the_theme     = wp_get_theme();
+	$the_theme     = wp_get_theme(); 
 	$theme_version = $the_theme->get( 'Version' );
 	wp_enqueue_style( 'theme-styles', get_stylesheet_directory_uri() . '/dist/main.css', array(), $theme_version );
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'theme-scripts', get_stylesheet_directory_uri() . '/dist/main.js', array( 'jquery' ), $theme_version, false );
+	if ( is_page_template( array( 'page-templates/page-home.php', 'page-templates/page-contact.php' ) ) ) :
+		wp_enqueue_script( 'google-map-api', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCB2RShyxiN7xPsQy1QI_SbqXXjW5p08S0', array(), $theme_version, true );
+		wp_enqueue_script( 'google-map-settings', get_stylesheet_directory_uri() . '/assets/js/google-maps.js', array( 'jquery' ), $theme_version, true );
+	endif;
 }
 
-add_action( 'wp_enqueue_scripts', 'hi_theme_enqueue_styles' );
+add_action( 'wp_enqueue_scripts', 'brn_theme_enqueue_styles' );
 
 // Theme custom template tags.
 require get_template_directory() . '/inc/theme-template-tags.php';
