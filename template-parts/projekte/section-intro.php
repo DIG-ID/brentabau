@@ -14,6 +14,7 @@
                 $projekte_query_args = array(
                     'post_type' => 'projekte',
                     'nopaging'  => true,
+                    'order'     => ASC,
                 );
                 $projekte_query = new WP_Query( $projekte_query_args );
                 if ( $projekte_query->have_posts() ) :
