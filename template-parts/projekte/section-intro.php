@@ -22,7 +22,10 @@
                     ?>
                     <div class="col-12 col-lg-6">
                         <div class="projekte-thumb__head">
-                            <?php the_title(); ?>,<?php the_field('category') ?>
+                            <div class="container"><div class="row projekte-thumb__row">
+                                <div class="col-8 projekte-thumb__col1"><p class="projekte-thumb__title"><?php the_title(); ?></p></div>
+                                <div class="col-4 projekte-thumb__col2"><p class="projekte-thumb__category"><?php the_field('category') ?></p></div>
+                            </div></div>
                         </div>
                         <?php if (has_post_thumbnail( $post->ID ) ): ?>
                         <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
@@ -30,7 +33,7 @@
                         <?php endif; ?>
                         <div class="projekte-thumb__wrapper">
                             <p class="text__dark"><?php the_field('description'); ?></p>
-                            <a href="<?php the_field('section_leistungen_button_link'); ?>" class="btn btn__white"><?php esc_html_e( 'Mehr Erfahren', 'brenta' ); ?></a>
+                            <a href="<?php the_permalink(); ?>" class="btn btn__white"><?php esc_html_e( 'Mehr Erfahren', 'brenta' ); ?></a>
                         </div>
                     </div>
                     <?php
