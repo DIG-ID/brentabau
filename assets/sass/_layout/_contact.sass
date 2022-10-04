@@ -4,7 +4,7 @@
             width: 100%
             height: auto
     &__row
-        background-size: cover !important
+        background-color: $main-bright
         padding: 100px 0
     &__intro
         .title__bright
@@ -13,3 +13,26 @@
             text-transform: uppercase
         .custom-container
             text-align: center
+    &__form
+        .kontakt-form
+            max-width: 338px
+            p:nth-child(4)
+                margin-bottom: 0
+        .kontakt-norm
+            font-family: $industry-font
+            font-size: 0.95em
+            font-weight: normal
+            color: $main-green
+            display: inline-block
+            margin-bottom: 5px
+        input, select, optgroup, textarea
+            background-color: #ffffff
+            border: 0
+            padding: 5px
+        input[type=submit]
+            font-family: $industry-font
+            font-size: 0.95em
+            font-weight: normal
+            color: $main-bright
+            width: 100%
+            background-color: $main-green
