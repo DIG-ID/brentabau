@@ -1,6 +1,6 @@
 <section class="section section-projekte__intro">
     <div class="container">
-        <div class="row section-projekte__row">
+        <div class="row section-projektepage__row">
             <div class="custom-container">
                 <h1 class="page__title"><span class="projekte__slash">/</span><?php the_title(); ?></h1>
             </div>
