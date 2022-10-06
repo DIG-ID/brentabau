@@ -1,8 +1,25 @@
+.leistungen
+    &__sepimg
+        &-margin270
+            width: 100%
+            margin-top: 270px
+        &-margin10
+            width: 100%
+            margin-top: 9%
+        &-margin275
+            width: 100%
+            margin-top: 275px
+        &-margin220
+            width: 100%
+            margin-top: 220px
+
 .section-leistungen
+    &__row
+        background-size: 100% !important
     &__intro
         .section-leistungen
             &__row
-                padding: 150px 0 300px 0
+                padding: 150px 0 68% 0
             &__col
                 .title__green
                     max-width: 550px
@@ -25,7 +42,14 @@
                             &:hover
                                 border-bottom: 10px solid $main-green
     &__abbruch
-        background-color: $main-bright
+        background-color: #ffffff
+        margin-top: -55%
+        -webkit-mask-image: url("../../filters/abbruch_filter.png")
+        mask-image: url("../../filters/abbruch_filter.png")
+        mask-repeat: no-repeat
+        -webkit-mask-repeat: no-repeat
+        mask-size: cover
+        -webkit-mask-size: cover
         &-row
             padding: 100px 0
             .title__black
@@ -33,9 +57,17 @@
             .text__dark
                 margin-bottom: 30px
     &__entkernen
+        position: absolute
+        width: 100%
         background-size: cover !important
+        -webkit-mask-image: url("../../filters/entkernen_filter.png")
+        mask-image: url("../../filters/entkernen_filter.png")
+        mask-repeat: no-repeat
+        -webkit-mask-repeat: no-repeat
+        mask-size: cover
+        -webkit-mask-size: cover
         &-row
-            padding: 100px 0
+            padding: 100px 0 200px 0
             .title__bright
                 margin-bottom: 40px
             .text__bright
@@ -43,9 +75,18 @@
         img
             width: 100%
     &__demontage
+        position: absolute
+        width: 100%
+        margin-top: -10%
         background-color: $main-bright
+        -webkit-mask-image: url("../../filters/demontage_filter.png")
+        mask-image: url("../../filters/demontage_filter.png")
+        mask-repeat: no-repeat
+        -webkit-mask-repeat: no-repeat
+        mask-size: cover
+        -webkit-mask-size: cover
         &-row
-            padding: 100px 0
+            padding: 200px 0 130px 0
             .title__black
                 margin-bottom: 40px
             .text__dark
@@ -53,9 +94,18 @@
         img
             width: 100%
     &__entsorgen
+        position: absolute
+        width: 100%
+        margin-top: -11%
         background-color: $main-green
+        -webkit-mask-image: url("../../filters/entsorgen_filter.png")
+        mask-image: url("../../filters/entsorgen_filter.png")
+        mask-repeat: no-repeat
+        -webkit-mask-repeat: no-repeat
+        mask-size: cover
+        -webkit-mask-size: cover
         &-row
-            padding: 100px 0
+            padding: 200px 0 150px 0
             .title__black
                 margin-bottom: 40px
             .text__dark
@@ -63,9 +113,18 @@
         img
             width: 100%
     &__beton
+        position: absolute
+        width: 100%
+        margin-top: -7%
         background-color: $main-grey
+        -webkit-mask-image: url("../../filters/beton_filter.png")
+        mask-image: url("../../filters/beton_filter.png")
+        mask-repeat: no-repeat
+        -webkit-mask-repeat: no-repeat
+        mask-size: cover
+        -webkit-mask-size: cover
         &-row
-            padding: 100px 0
+            padding: 200px 0 150px 0
             .title__bright
                 margin-bottom: 40px
             .text__bright

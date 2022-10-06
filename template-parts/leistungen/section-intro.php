@@ -54,11 +54,10 @@
                 </div>
             </div>
         </div>
-        <div class="row g-0">
-            <img src="<?php echo wp_upload_dir()['url'] . '/Entkernen.jpg' ?>" title="" alt="">
-        </div>
     </div>
 </section>
+
+<img class="leistungen__sepimg-margin270" src="<?php echo wp_upload_dir()['url'] . '/Entkernen.jpg' ?>" title="" alt="">
 
 <section class="section section-leistungen__demontage">
     <div class="container-fluid p-0">
@@ -74,11 +73,10 @@
                 </div>
             </div>
         </div>
-        <div class="row g-0">
-            <img src="<?php echo wp_upload_dir()['url'] . '/Demontage.jpg' ?>" title="" alt="">
-        </div>
     </div>
 </section>
+
+<img class="leistungen__sepimg-margin10" src="<?php echo wp_upload_dir()['url'] . '/Demontage.jpg' ?>" title="" alt="">
 
 <section class="section section-leistungen__entsorgen">
     <div class="container-fluid p-0">
@@ -94,11 +92,10 @@
                 </div>
             </div>
         </div>
-        <div class="row g-0">
-            <img src="<?php echo wp_upload_dir()['url'] . '/Entsorgen.jpg' ?>" title="" alt="">
-        </div>
     </div>
 </section>
+
+<img class="leistungen__sepimg-margin275" src="<?php echo wp_upload_dir()['url'] . '/Entsorgen.jpg' ?>" title="" alt="">
 
 <section class="section section-leistungen__beton">
     <div class="container-fluid p-0">
@@ -115,8 +112,7 @@
                 </div>
             </div>
         </div>
-        <div class="row g-0">
-            <img src="<?php echo wp_upload_dir()['url'] . '/Beton.jpg' ?>" title="" alt="">
-        </div>
     </div>
 </section>
+
+<img class="leistungen__sepimg-margin220" src="<?php echo wp_upload_dir()['url'] . '/Beton.jpg' ?>" title="" alt="">
