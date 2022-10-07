@@ -17,6 +17,7 @@
                         <div class="column__wrapper">
                             <h1 class="title__black"><?php the_field('section_uberuns_title'); ?></h1>
                             <p class="text__dark"><?php the_field('section_uberuns_text'); ?></p>
+                            <a href="<?php the_field('section_uberuns_button_link'); ?>" class="btn btn__white"><?php the_field('section_uberuns_button_label'); ?></a>
                         </div>
                     </div>
                     <div class="col-12 col-lg-6 section-uberuns__col-right">
