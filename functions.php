@@ -18,11 +18,7 @@ function brn_theme_setup() {
 
 	add_theme_support( 'post-thumbnails' );
 
-	add_theme_support( 'post-formats', array( 'gallery', 'video' ) );
-
 	add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script' ) );
-
-	add_image_size( 'event-gallery-full', 1920, 900, array( 'center', 'center' ) );
 
 }
 
@@ -66,6 +62,21 @@ function brn_get_font_face_styles() {
 	";
 
 }
+
+/**
+ * Add custom classes to posts body
+ */
+function custom_body_classes( $classes ) {
+    if ( is_single() ) {
+        global $post;
+        foreach ( ( get_the_category( $post->ID ) ) as $category ) {
+            $classes[] = $category->category_nicename;
+        }
+    }
+    return $classes;
+}
+add_filter( 'body_class', 'custom_body_classes' );
+
 
 /**
  * Enqueue styles and scripts

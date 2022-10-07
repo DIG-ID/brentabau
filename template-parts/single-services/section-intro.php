@@ -10,7 +10,7 @@
             ?>
             </div>
         </div>
-        <div class="row g-0 section-services__row pos-absolute">
+        <div class="row g-0 section-services__row pos-absolute" style="background:url('<?php echo wp_upload_dir()['url'] . '/bg_Leistungen.jpg' ?>') no-repeat;">
             <div class="custom-container">
                 <div class="row">
                     <div class="col-12 col-lg-7">
