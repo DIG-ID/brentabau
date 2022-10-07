@@ -2,6 +2,11 @@
     <div class="container">
         <div class="row section-projektepage__row">
             <div class="custom-container">
+            <?php 
+            $post_data = get_page_by_path('archiv-aktuelle-projekte');
+            $post_id = $post_data->ID;
+            ?>
+            <h1 class="page__title page__title-white"><span class="projekte__slash-white">/</span><?php echo get_the_title( $post_id ); ?></h1>
                 <h1 class="page__title"><span class="projekte__slash">/</span><?php the_title(); ?></h1>
             </div>
         </div>
