@@ -3,7 +3,7 @@
 		<div class="container">
 			<div class="row justify-content-between">
                 <div class="col col-12 col-lg-3 footer__col">
-                    <img src="<?php echo wp_upload_dir()['url'] . '/Logo_Footer.svg' ?>" title="footer logo" alt="footer logo">
+                    <img class="logo__footer-img" src="<?php echo wp_upload_dir()['url'] . '/Logo_Footer.svg' ?>" title="footer logo" alt="footer logo">
                 </div>
                 <div class="col col-12 col-lg-3 footer__col">
                     <div class="footer__text">
