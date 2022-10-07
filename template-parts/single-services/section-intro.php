@@ -13,11 +13,11 @@
         <div class="row g-0 section-services__row pos-absolute">
             <div class="custom-container">
                 <div class="row">
-                    <div class="col-12 col-lg-5">
+                    <div class="col-12 col-lg-7">
                         <h1 class="title__black"><?php the_title(); ?></h1>
                         <p class="text__dark"><?php the_field('description'); ?></p>
                     </div>
-                    <div class="col-12 col-lg-7"></div>
+                    <div class="col-12 col-lg-5"></div>
                 </div>
             </div>
         </div>
