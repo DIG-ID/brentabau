@@ -23,7 +23,7 @@
     </div>
 </section>
 
-<section class="section section-leistungen__abbruch">
+<section id="abbruch" class="section section-leistungen__abbruch">
     <div class="container-fluid p-0">
         <div class="row g-0 section-leistungen__abbruch-row justify-content-center">
             <div class="custom-container">
@@ -40,7 +40,7 @@
     </div>
 </section>
 
-<section class="section section-leistungen__entkernen" style="background:url('<?php echo wp_upload_dir()['url'] . '/bg_Leistungen.jpg' ?>') no-repeat;">
+<section id="entkernen" class="section section-leistungen__entkernen" style="background:url('<?php echo wp_upload_dir()['url'] . '/bg_Leistungen.jpg' ?>') no-repeat;">
     <div class="container-fluid p-0">
         <div class="row g-0 section-leistungen__entkernen-row justify-content-center">
             <div class="custom-container">
@@ -59,7 +59,7 @@
 
 <img class="leistungen__sepimg-margin270" src="<?php echo wp_upload_dir()['url'] . '/Entkernen.jpg' ?>" title="" alt="">
 
-<section class="section section-leistungen__demontage">
+<section id="demontage" class="section section-leistungen__demontage">
     <div class="container-fluid p-0">
         <div class="row g-0 section-leistungen__demontage-row justify-content-center">
             <div class="custom-container">
@@ -78,7 +78,7 @@
 
 <img class="leistungen__sepimg-margin10" src="<?php echo wp_upload_dir()['url'] . '/Demontage.jpg' ?>" title="" alt="">
 
-<section class="section section-leistungen__entsorgen">
+<section id="entsorgen" class="section section-leistungen__entsorgen">
     <div class="container-fluid p-0">
         <div class="row g-0 section-leistungen__entsorgen-row justify-content-center">
             <div class="custom-container">
@@ -97,7 +97,7 @@
 
 <img class="leistungen__sepimg-margin275" src="<?php echo wp_upload_dir()['url'] . '/Entsorgen.jpg' ?>" title="" alt="">
 
-<section class="section section-leistungen__beton">
+<section id="beton" class="section section-leistungen__beton">
     <div class="container-fluid p-0">
         <div class="row g-0 section-leistungen__beton-row justify-content-center">
             <div class="custom-container">
