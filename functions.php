@@ -97,8 +97,5 @@ function brn_theme_enqueue_styles() {
 
 add_action( 'wp_enqueue_scripts', 'brn_theme_enqueue_styles' );
 
-// Theme custom template tags.
-require get_template_directory() . '/inc/theme-template-tags.php';
-
 // Theme customizer options.
 require get_template_directory() . '/inc/customizer.php';

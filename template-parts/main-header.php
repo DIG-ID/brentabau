@@ -1,5 +1,5 @@
 <header id="main-header" class="main-header" itemscope itemtype="http://schema.org/WebSite">
-<nav class="navbar navbar-expand-lg navbar-dark" role="navigation" aria-label="<?php esc_attr_e( 'Main navigation', 'fc-oberwil' ); ?>">
+<nav class="navbar navbar-expand-lg navbar-dark" role="navigation" aria-label="<?php esc_attr_e( 'Main navigation', 'brenta' ); ?>">
 	<div class="custom-container">
 		<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg">
 			<span></span>
@@ -18,7 +18,6 @@
 					)
 				);
 				?>
-				<?php do_action( 'socials' ); ?>
 	</div>
 </nav>
 </header>
