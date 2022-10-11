@@ -121,3 +121,85 @@
         font-weight: bold
         color: $main-bright
         text-transform: uppercase
+
+/* RESPONSIVE */
+@include media-breakpoint-down(lg)
+    .section-intro
+        &__row
+            padding-left: 15px
+            padding-right: 15px
+            .btn__green
+                display: none
+    
+    .section-leistungen
+        &__col-left
+            padding: 40px 15px 50px
+            .title__black
+                margin-bottom: 50px
+            .text__dark
+                margin: 0 auto 50px auto
+            .btn__white
+                display: block
+                max-width: 241px
+                margin: 0 auto
+        &__col-right
+            padding: 40px 15px 50px
+            text-align: center
+            ul
+                li
+                    a
+                        font-size: 24px
+        .column__wrapper
+            float: none
+
+    .section-projekte
+        &__row
+            padding: 40px 15px 50px
+        &__col-right
+            padding: 0
+        &__col-left
+            order: 2
+            margin-top: 20px
+            .column__wrapper
+                text-align: center
+        .title__bright
+            margin-bottom: 50px
+        .text__bright
+            margin: 0 auto 50px auto
+
+    .section-uberuns
+        &__row
+            padding: 40px 15px 50px
+        &__col-left
+            padding: 0
+            .column__wrapper
+                float: none
+                margin-bottom: 40px
+            .title__black
+                margin-bottom: 50px
+            .text__dark
+                margin: 0 auto 50px auto
+            .btn__white
+                display: block
+                max-width: 241px
+                margin: 0 auto
+        &__col-right
+            margin-top: 0
+            padding: 0
+            text-align: center
+            img
+                width: 100%
+                height: auto
+                max-width: 432px
+
+    .section-partnersmap
+        &__row
+            padding: 40px 15px 50px
+
+    .home
+        .title__black::before,
+        .title__bright::before
+            bottom: 5px
+            left: -21px
+            height: 24px
+            width: 24px
