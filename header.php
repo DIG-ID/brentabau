@@ -11,9 +11,5 @@
 	<body <?php body_class(); ?>>
 		<?php
 		do_action( 'wp_body_open' );
-		if ( is_front_page( ) ) :
-			get_template_part( 'template-parts/main', 'header' );
-		else :
-			get_template_part( 'template-parts/page', 'header' );
-		endif;
+		get_template_part( 'template-parts/main', 'header' );
 		?>
