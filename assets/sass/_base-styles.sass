@@ -94,3 +94,32 @@ body
         margin: 0 5px
         border-radius: 3px
         fill: $main-grey
+
+
+/*Google Maps*/
+.acf-map
+    width: 100%
+    border: #ccc solid 1px
+    img
+        max-width: inherit !important
+
+.acf-map.map-kontakt
+    height: 520px
+    border: 0
+
+.acf-map.map-homepage
+    height: 520px
+    border: 0
+
+@include media-breakpoint-down(lg)
+    .acf-map.map-kontakt
+        height: 300px
+
+    .acf-map.map-homepage
+        height: 300px
+
+@include media-breakpoint-down(sm)
+    .acf-map.map-kontakt
+        display: none
+    .acf-map.map-homepage
+        display: none
