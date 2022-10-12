@@ -15,7 +15,7 @@
             <div class="custom-container">
                 <div class="row g-0">
                     <div class="col-12">
-                        <h1 class="title__bright"><?php the_field('section_projekte_title'); ?></h1>
+                        <h2 class="title__bright"><?php the_field('section_projekte_title'); ?></h2>
                     </div>
                 </div>
                 <div class="row g-0">

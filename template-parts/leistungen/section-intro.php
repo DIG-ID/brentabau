@@ -29,7 +29,7 @@
             <div class="custom-container">
                 <div class="row g-0">
                     <div class="col-12 col-lg-6">
-                        <h1 class="title__black"><?php the_field('section_abbruch_title'); ?></h1>
+                        <h2 class="title__black"><?php the_field('section_abbruch_title'); ?></h2>
                         <p class="text__dark"><?php the_field('section_abbruch_text'); ?></p>
                         <a href="<?php the_field('section_abbruch_button_link'); ?>" class="btn btn__white"><?php _e( 'Mehr Erfahren', 'brenta' ); ?></a>
                     </div>
@@ -47,7 +47,7 @@
                 <div class="row g-0">
                     <div class="col-12 col-lg-6"></div>
                     <div class="col-12 col-lg-6">
-                        <h1 class="title__bright"><?php the_field('section_entkernen_title'); ?></h1>
+                        <h2 class="title__bright"><?php the_field('section_entkernen_title'); ?></h2>
                         <p class="text__bright"><?php the_field('section_entkernen_text'); ?></p>
                         <a href="<?php the_field('section_entkernen_button_link'); ?>" class="btn btn__transparent"><?php _e( 'Mehr Erfahren', 'brenta' ); ?></a>
                     </div>
@@ -65,7 +65,7 @@
             <div class="custom-container">
                 <div class="row g-0">
                     <div class="col-12 col-lg-6">
-                        <h1 class="title__black"><?php the_field('section_demontage_title'); ?></h1>
+                        <h2 class="title__black"><?php the_field('section_demontage_title'); ?></h2>
                         <p class="text__dark"><?php the_field('section_demontage_text'); ?></p>
                         <a href="<?php the_field('section_demontage_button_link'); ?>" class="btn btn__white"><?php _e( 'Mehr Erfahren', 'brenta' ); ?></a>
                     </div>
@@ -85,7 +85,7 @@
                 <div class="row g-0">
                     <div class="col-12 col-lg-6"></div>
                     <div class="col-12 col-lg-6">
-                        <h1 class="title__black"><?php the_field('section_entsorgen_title'); ?></h1>
+                        <h2 class="title__black"><?php the_field('section_entsorgen_title'); ?></h2>
                         <p class="text__dark"><?php the_field('section_entsorgen_text'); ?></p>
                         <a href="<?php the_field('section_entsorgen_button_link'); ?>" class="btn btn__transparent-green"><?php _e( 'Mehr Erfahren', 'brenta' ); ?></a>
                     </div>
@@ -103,7 +103,7 @@
             <div class="custom-container">
                 <div class="row g-0">
                     <div class="col-12">
-                        <h1 class="title__bright"><?php the_field('section_beton_title'); ?></h1>
+                        <h2 class="title__bright"><?php the_field('section_beton_title'); ?></h2>
                         <div class="col-12 col-lg-6">
                             <p class="text__bright"><?php the_field('section_beton_text'); ?></p>
                             <a href="<?php the_field('section_beton_button_link'); ?>" class="btn btn__transparent"><?php _e( 'Mehr Erfahren', 'brenta' ); ?></a>

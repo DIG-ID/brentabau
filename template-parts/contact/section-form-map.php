@@ -5,7 +5,7 @@
                 <div class="row g-0">
                     <div class="col-12 col-lg-6 section-contact__col-left">
                         <div class="column__wrapper">
-                            <h1 class="title__black"><?php the_field('section_form_title'); ?></h1>
+                            <h2 class="title__black"><?php the_field('section_form_title'); ?></h2>
                             <p class="text__dark"><?php the_field('section_form_text'); ?></p>
                         </div>
                     </div>

@@ -4,7 +4,7 @@
             <div class="custom-container">
                 <div class="row justify-content-center">
                     <img class="brenta__symbol" src="<?php echo wp_upload_dir()['url'] . '/symbol.svg' ?>" title="" alt="">
-                    <h1 class="title__bright"><?php the_field('section_services_title'); ?></h1>
+                    <h2 class="title__bright"><?php the_field('section_services_title'); ?></h2>
                 </div>
                 <div class="row g-0 d-flex justify-content-around">
                     <?php
