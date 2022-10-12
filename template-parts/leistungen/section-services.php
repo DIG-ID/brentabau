@@ -6,7 +6,7 @@
                     <img class="brenta__symbol" src="<?php echo wp_upload_dir()['url'] . '/symbol.svg' ?>" title="" alt="">
                     <h1 class="title__bright"><?php the_field('section_services_title'); ?></h1>
                 </div>
-                <div class="row d-flex justify-content-around">
+                <div class="row g-0 d-flex justify-content-around">
                     <?php
                     if( have_rows('section_services_services_repeater') ):
                     while( have_rows('section_services_services_repeater') ) : the_row(); ?>
@@ -19,7 +19,7 @@
                     </div>
                     <?php endwhile; endif; ?>
                 </div>
-                <div class="row">
+                <div class="row g-0">
                     <p class="text__bright"><?php the_field('section_services_text'); ?></p>
                 </div>
             </div>

@@ -2,7 +2,7 @@
     <div class="container-fluid p-0">
         <div class="row g-0 section-leistungen__row justify-content-center" style="background:url('<?php echo wp_upload_dir()['url'] . '/Abbruch.jpg' ?>') no-repeat;">
             <div class="custom-container">
-                <div class="row">
+                <div class="row g-0">
                     <div class="col-12 col-lg-6"></div>
                     <div class="col-12 col-lg-6 section-leistungen__col">
                         <h1 class="title__green"><?php the_field('section_intro_title'); ?></h1>
@@ -27,7 +27,7 @@
     <div class="container-fluid p-0">
         <div class="row g-0 section-leistungen__abbruch-row justify-content-center">
             <div class="custom-container">
-                <div class="row">
+                <div class="row g-0">
                     <div class="col-12 col-lg-6">
                         <h1 class="title__black"><?php the_field('section_abbruch_title'); ?></h1>
                         <p class="text__dark"><?php the_field('section_abbruch_text'); ?></p>
@@ -44,7 +44,7 @@
     <div class="container-fluid p-0">
         <div class="row g-0 section-leistungen__entkernen-row justify-content-center">
             <div class="custom-container">
-                <div class="row">
+                <div class="row g-0">
                     <div class="col-12 col-lg-6"></div>
                     <div class="col-12 col-lg-6">
                         <h1 class="title__bright"><?php the_field('section_entkernen_title'); ?></h1>
@@ -63,7 +63,7 @@
     <div class="container-fluid p-0">
         <div class="row g-0 section-leistungen__demontage-row justify-content-center">
             <div class="custom-container">
-                <div class="row">
+                <div class="row g-0">
                     <div class="col-12 col-lg-6">
                         <h1 class="title__black"><?php the_field('section_demontage_title'); ?></h1>
                         <p class="text__dark"><?php the_field('section_demontage_text'); ?></p>
@@ -82,7 +82,7 @@
     <div class="container-fluid p-0">
         <div class="row g-0 section-leistungen__entsorgen-row justify-content-center">
             <div class="custom-container">
-                <div class="row">
+                <div class="row g-0">
                     <div class="col-12 col-lg-6"></div>
                     <div class="col-12 col-lg-6">
                         <h1 class="title__black"><?php the_field('section_entsorgen_title'); ?></h1>
@@ -101,7 +101,7 @@
     <div class="container-fluid p-0">
         <div class="row g-0 section-leistungen__beton-row justify-content-center">
             <div class="custom-container">
-                <div class="row">
+                <div class="row g-0">
                     <div class="col-12">
                         <h1 class="title__bright"><?php the_field('section_beton_title'); ?></h1>
                         <div class="col-12 col-lg-6">

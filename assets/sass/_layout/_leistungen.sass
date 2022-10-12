@@ -196,3 +196,82 @@
                 color: $main-bright
                 width: 100%
                 background-color: $main-green
+
+/* RESPONSIVE */
+@include media-breakpoint-down(lg)
+    .leistungen
+        &__sepimg
+            &-margin270
+                width: 100%
+                margin-top: 0
+            &-margin10
+                width: 100%
+                margin-top: 0
+            &-margin275
+                width: 100%
+                margin-top: 0
+            &-margin220
+                width: 100%
+                margin-top: 0
+
+    .section-leistungen
+        &__intro
+            .section-leistungen
+                &__row
+                    padding: 0
+        &__abbruch
+            -webkit-mask-image: none
+            mask-image: none
+            margin-top: 0
+            padding: 40px 0
+            &-row
+                padding: 0 15px
+        &__entkernen
+            position: relative
+            -webkit-mask-image: none
+            mask-image: none
+            margin-top: 0
+            padding: 40px 0
+            &-row
+                padding: 0 15px
+        &__demontage
+            position: relative
+            -webkit-mask-image: none
+            mask-image: none
+            margin-top: 0
+            padding: 40px 0
+            &-row
+                padding: 0 15px
+        &__entsorgen
+            position: relative
+            -webkit-mask-image: none
+            mask-image: none
+            margin-top: 0
+            padding: 40px 0
+            &-row
+                padding: 0 15px
+        &__beton
+            position: relative
+            -webkit-mask-image: none
+            mask-image: none
+            margin-top: 0
+            padding: 40px 0
+            &-row
+                padding: 0 15px
+        &__kontakt-form 
+            .kontakt-form
+                column-count: 1
+        &__kontakt-row
+            .title__black
+                margin-bottom: 50px
+            .title__black::before
+                display: none
+                bottom: 5px
+                left: -21px
+                height: 24px
+                width: 24px
+        &__col
+            padding: 70px 15px
+        &__services
+            &-row
+                padding: 40px 15px

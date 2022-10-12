@@ -36,4 +36,33 @@
             text-transform: uppercase
         .text__dark
             max-width: 400px
-        
+
+/* RESPONSIVE */
+@include media-breakpoint-down(lg)
+    .section-uberunspage
+        &__intro, &__row, &__jobs__row
+            .title__bright
+                left: 0
+                transform: none
+            .title__black
+                left: 0
+                transform: none
+            .brenta__symbol
+                display: block
+                margin: 0 auto
+        &__row
+            padding: 50px 15px 0
+        &__about
+            &__row
+                padding: 50px 15px 0
+        &__jobs
+            padding-bottom: 15px
+            &__row
+                padding: 50px 15px 0
+
+    .section-uberunspage
+        &__col-right
+            img
+                width: 100%
+                height: 100%
+                max-width: 432px
