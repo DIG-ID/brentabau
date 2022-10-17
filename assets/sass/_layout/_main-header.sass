@@ -4,6 +4,7 @@
   z-index: 99
   .site-branding
     background-color: #231f20
+    width: 100%
     padding: 20px 0px
     .site-logo
       .custom-logo-link
@@ -13,11 +14,8 @@
           width: 100%
           height: auto
           object-fit: cover
-  .navbar
-    padding: 10px 0px
-    background-color: #d5d5d5
-    transition: $main-transition
     .navbar-toggler
+      position: relative
       display: flex
       flex-direction: column
       justify-content: space-between
@@ -25,15 +23,35 @@
       border-radius: 0px
       padding: 0px 0px
       margin: 0px
+      overflow: hidden
       span
         display: block
         width: 40px
         height: 4px
         margin: 3px 0px
         background-color: $main-grey
-    .navbar-nav
+        transition: $main-transition
+    .navbar-toggler[aria-expanded="true"]
+      span
+        &:nth-child(1)
+          transform: rotate(-45deg) translate(-7px, 7px)
+        &:nth-child(2)
+          transform: translateX(100px)
+        &:nth-child(3)
+          transform: rotate(45deg) translate(-7px, -7px)
+          
+  .navbar
+    padding: 0px
+    flex-direction: column
+    transition: $main-transition
+    background-color: #d5d5d5
+
+    #main-nav
       width: 100%
       justify-content: space-between
+      padding-top: 10px
+      padding-bottom: 10px
+
   .menu-item
     a
       position: relative
@@ -101,18 +119,37 @@
 // Responsive
 @include media-breakpoint-down(lg)
   #main-header
-    top: 30px
-    position: sticky
+    top: 0px
+    position: fixed
+    width: 100%
     .site-branding
-      display: none
-    .navbar
       background-color: #d5d5d5
+      padding: 20px 0px
+      .site-logo
+        .custom-logo-link
+          img
+            max-width: 150px
+    .navbar
+      padding: 0px 0px
+      background-color: $main-grey
+      #main-nav
+        height: calc( 100vh - 76px )
+        justify-content: center
+        .menu-item
+          a
+            font-size: 30px
+            padding-top: 10px
+            padding-bottom: 10px
+
+  #main-content
+    margin-top: 76px
+
+  .home.page-template-page-home
+    #main-header
+      top: 0px
+      position: fixed
 
   .home.page-template-page-home.admin-bar
     #main-header
       top: 30px
-      position: sticky
-      .navbar
-        background-color: #d5d5d5
-    .section.section-intro
-      margin-top: 0px
+      position: fixed
