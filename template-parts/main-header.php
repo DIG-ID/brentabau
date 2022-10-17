@@ -10,6 +10,9 @@
 						endif;
 						?>
 					</div>
+					<div class="col d-none d-lg-flex justify-content-end">
+						<?php do_action( 'socials' ); ?>
+					</div>
 					<div class="col d-flex justify-content-end d-lg-none">
 						<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-expanded="false" aria-controls="navbarSupportedContent">
 							<span></span>
@@ -21,7 +24,6 @@
 			</div>
 		</div>
 		<div class="custom-container">
-
 			<?php
 			wp_nav_menu(
 				array(

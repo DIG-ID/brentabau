@@ -52,4 +52,34 @@
         &:hover
             background-color: $main-bright !important
             color: $main-grey
-            
+
+#button-btt
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: rgb(34 34 34 / 40%)
+  width: 50px
+  height: 50px
+  text-align: center
+  position: fixed
+  bottom: 40px
+  right: 10px
+  transition: all 400ms ease-in-out
+  transform: perspective(300px) rotateY(-120deg) translateZ(-10px)
+  box-shadow: 0 3px 20px rgb(0 0 0 / 22%)
+  opacity: 0
+  visibility: hidden
+  z-index: 1000
+  &:active
+    background-color: rgb(34 34 34 / 100%)
+  &:hover
+    cursor: pointer
+    background-color: rgb(34 34 34 / 100%)
+  svg
+    width: 20px
+    fill: #fff
+  
+#button-btt.show
+  opacity: 1
+  visibility: visible
+  transform: perspective(300px) rotateY(0deg)
