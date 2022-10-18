@@ -19,14 +19,14 @@
             <div class="col-12">
                 <div class="projekte-single__head">
                     <div class="container"><div class="row projekte-single__row">
-                        <div class="col-8 projekte-single__col1"><p class="projekte-single__title"><?php the_title(); ?></p></div>
-                        <div class="col-4 projekte-single__col2"><p class="projekte-single__category"><?php the_field('category') ?></p></div>
+                        <div class="col-12 col-sm-8 projekte-single__col1"><p class="projekte-single__title"><?php the_title(); ?></p></div>
+                        <div class="col-12 col-sm-4 projekte-single__col2"><p class="projekte-single__category"><?php the_field('category') ?></p></div>
                     </div></div>
                 </div>
                 <div class="projekte-single__wrapper">
                     <div class="container"><div class="row">
-                    <div class="col-8 projekte-single__data1"><p class="text__dark"><?php the_field('description'); ?></p></div>
-                    <div class="col-4 projekte-single__data2"><p class="text__dark"><b>Dauer: </b><?php the_field('duration'); ?></p><p class="text__dark"><b>Arbeitskräfte: </b><?php the_field('manpower'); ?></p></div>
+                    <div class="col-12 col-sm-8 projekte-single__data1"><p class="text__dark"><?php the_field('description'); ?></p></div>
+                    <div class="col-12 col-sm-4 projekte-single__data2"><p class="text__dark"><b>Dauer: </b><?php the_field('duration'); ?></p><p class="text__dark"><b>Arbeitskräfte: </b><?php the_field('manpower'); ?></p></div>
                     </div></div>
                 </div>
                 <div class="projekte-single__gallery">

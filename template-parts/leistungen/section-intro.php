@@ -1,5 +1,6 @@
 <section class="section section-leistungen__intro">
     <div class="container-fluid p-0">
+        <img class="leistungen__sepimg-margin10 only__mobile" src="<?php echo wp_upload_dir()['url'] . '/Abbruch.jpg' ?>" title="" alt="">
         <div class="row g-0 section-leistungen__row justify-content-center" style="background:url('<?php echo wp_upload_dir()['url'] . '/Abbruch.jpg' ?>') no-repeat;">
             <div class="custom-container">
                 <div class="row g-0">

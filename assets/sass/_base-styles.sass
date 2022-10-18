@@ -14,6 +14,10 @@ body
     margin-left: auto
     max-width: 1110px
 
+.only
+    &__mobile
+        display: none
+
 .brenta
     &__symbol
         width: 60px
@@ -107,6 +111,10 @@ body
         margin: 50px 0
 
 @include media-breakpoint-down(lg)
+    .only
+        &__mobile
+            display: block
+
     .acf-map.map-kontakt
         height: 300px
 
@@ -132,3 +140,7 @@ body
         &__title
             font-size: 36px
 
+@include media-breakpoint-down(sm)
+    .page
+        &__title
+            font-size: 26px
