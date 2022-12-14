@@ -6,7 +6,23 @@
                     <h2 class="section-partnersmap__title"><?php the_field('section_partners_title'); ?></h2>
                 </div>
                 <div class="row">
-
+                <div class="swiper mySwiper_partners">
+                <?php 
+                    $rows = get_field('section_partners_logos');
+                    if( $rows ) {
+                        echo '<ul class="swiper-wrapper">';
+                        foreach( $rows as $row ) {
+                            $image = $row['logo_image']; ?>
+                            <li class="swiper-slide"><a href="<?php echo $row['logo_link']; ?>">
+                             <?php   
+                             echo wp_get_attachment_image( $image, 'full' );
+                             echo wpautop( $row['caption'] );
+                            ?> </a></li>
+                        <?php }
+                        echo '</ul>';
+                    } 
+                    ?>
+                    </div>
                 </div>
             </div>
         </div>
