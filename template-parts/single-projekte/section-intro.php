@@ -37,7 +37,11 @@
                     <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
                         <div class="swiper-wrapper">
                             <?php foreach( $images as $image_id ): ?>
-                            <div class="swiper-slide"><?php echo wp_get_attachment_image( $image_id, $size ); ?>
+                            <div class="swiper-slide">
+                                <?php $photo_url = wp_get_attachment_image_url( $image_id, $size ); ?>
+                                <a href="<?php echo esc_url($photo_url); ?>" style="width: 100%;" data-fancybox="photos">
+                                    <?php echo wp_get_attachment_image( $image_id, $size ); ?>
+                                </a>
                             </div>
                             <?php endforeach; ?>
                         </div>
@@ -58,3 +62,6 @@
         </div>
     </div>
 </section>
+<script type="application/javascript">
+
+</script>
