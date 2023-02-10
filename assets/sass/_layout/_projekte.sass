@@ -134,6 +134,12 @@
             margin-bottom: 100px
 
 /* RESPONSIVE */
+@include media-breakpoint-down(xl)
+    .projekte-thumb
+        &__image
+            &-wrapper
+                max-height: 300px
+
 @include media-breakpoint-down(lg)
     .section-projektepage
         &__row
@@ -171,10 +177,10 @@
         &__data2
             padding-left: 10px
 
-    .projekte-thumb
-        &__image
-            &-wrapper
-                max-height: 300px
+        .projekte-thumb
+            &__image
+                &-wrapper
+                    max-height: 340px
 
 @include media-breakpoint-down(md)
     .projekte-thumb
