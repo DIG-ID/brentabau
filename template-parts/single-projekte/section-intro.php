@@ -18,7 +18,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="projekte-single__head">
-                    <div class="container"><div class="row projekte-single__row">
+                    <div class="container-fluid"><div class="row projekte-single__row">
                         <div class="col-12 col-sm-8 projekte-single__col1"><p class="projekte-single__title"><?php the_title(); ?></p></div>
                         <div class="col-12 col-sm-4 projekte-single__col2"><p class="projekte-single__category"><?php the_field('category') ?></p></div>
                     </div></div>
@@ -32,7 +32,7 @@
                 <div class="projekte-single__gallery">
                     <?php 
                     $images = get_field('gallery');
-                    $size = 'full';
+                    $size = 'large';
                     if( $images ): ?>
                     <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
                         <div class="swiper-wrapper">
