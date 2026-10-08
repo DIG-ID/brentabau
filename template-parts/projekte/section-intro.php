@@ -15,7 +15,7 @@
                     'post_type' => 'projekte',
                     'nopaging'  => true,
                     'orderby'   => 'date',
-                    'order'     => 'ASC',
+                    'order'     => 'DESC',
                 );
                 $projekte_query = new WP_Query( $projekte_query_args );
                 if ( $projekte_query->have_posts() ) :
