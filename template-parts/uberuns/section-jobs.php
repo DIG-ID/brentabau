@@ -1,28 +1,27 @@
-<section class="section section-uberunspage__jobs">
-    <div class="container-fluid p-0">
-        <div class="row g-0 section-uberunspage__jobs__row justify-content-center">
-            <div class="custom-container">
-                <img class="brenta__symbol" src="<?php echo wp_upload_dir()['url'] . '/symbol.svg' ?>" title="" alt="">
-                <h1 class="title__black"><?php the_field('section_jobs_title'); ?></h1>
-            </div>
+<?php
+$section_jobs_bg_id  = get_field( 'section_jobs_background_image' );
+$section_jobs_bg_url = $section_jobs_bg_id ? wp_get_attachment_image_url( $section_jobs_bg_id, 'full' ) : '';
+$section_jobs_text   = get_field( 'section_jobs_text_content' );
+$section_jobs_image  = get_field( 'section_jobs_profile_picture' );
+?>
+<section class="section section-uberunspage__jobs<?php echo $section_jobs_bg_url ? ' has-bg-image' : ''; ?>"<?php echo $section_jobs_bg_url ? ' style="background-image: url(\'' . esc_url( $section_jobs_bg_url ) . '\');"' : ''; ?>>
+    <div class="custom-container section-uberunspage__jobs__container">
+        <div class="section-uberunspage__jobs__header">
+            <span class="section-uberunspage__jobs__square" aria-hidden="true"></span>
+            <h2 class="title__black"><?php echo esc_html( get_field( 'section_jobs_title' ) ); ?></h2>
         </div>
-        <div class="row g-0 section-uberunspage__row">
-            <div class="custom-container">
-                <div class="row g-0 align-items-center">
-                    <div class="col-12 col-lg-6 section-uberunspage__col-left">
-                        <div class="column__wrapper">
-                            <p class="text__dark"><?php the_field('section_jobs_text_content'); ?></p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-6 section-uberunspage__col-right">
-                    <?php 
-                        $section_uberuns_profile_picture = get_field('section_jobs_profile_picture');
-                        if( $section_uberuns_profile_picture ) {
-                            echo wp_get_attachment_image( $section_uberuns_profile_picture, 'full' );
-                        } 
-                    ?>
-                    </div>
+        <div class="row g-0 section-uberunspage__jobs__content">
+            <div class="col-12 col-lg-6">
+                <?php if ( $section_jobs_text ) : ?>
+                <div class="section-uberunspage__jobs__text text__dark"><?php echo wp_kses_post( $section_jobs_text ); ?></div>
+                <?php endif; ?>
+            </div>
+            <div class="col-12 col-lg-6">
+                <?php if ( $section_jobs_image ) : ?>
+                <div class="section-uberunspage__jobs__image">
+                    <?php echo wp_get_attachment_image( $section_jobs_image, 'large' ); ?>
                 </div>
+                <?php endif; ?>
             </div>
         </div>
     </div>

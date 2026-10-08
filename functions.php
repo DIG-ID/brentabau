@@ -86,7 +86,9 @@ function brn_theme_enqueue_styles() {
 	//Get the theme data
 	$the_theme     = wp_get_theme(); 
 	$theme_version = $the_theme->get( 'Version' );
-	wp_enqueue_style( 'theme-styles', get_stylesheet_directory_uri() . '/dist/main.css', array(), $theme_version );
+	// Adobe Fonts kit: Industry 200/300/400/700 (+ italics).
+	wp_enqueue_style( 'adobe-fonts', 'https://use.typekit.net/uhn8jaf.css', array(), null );
+	wp_enqueue_style( 'theme-styles', get_stylesheet_directory_uri() . '/dist/main.css', array( 'adobe-fonts' ), $theme_version );
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'theme-scripts', get_stylesheet_directory_uri() . '/dist/main.js', array( 'jquery' ), $theme_version, false );
 	if ( is_page_template( array( 'page-templates/page-home.php', 'page-templates/page-contact.php' ) ) ) :

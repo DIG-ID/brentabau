@@ -7,5 +7,15 @@
                 <p class="text__bright"><?php the_field('section_intro_introduction_text'); ?></p>
             </div>
         </div>
+        <div class="row g-0">
+            <div class="col section-uberuns__image">
+            <?php 
+            $section_uberuns_section_image = get_field('section_about_banner_image');
+            if( $section_uberuns_section_image ) {
+                echo wp_get_attachment_image( $section_uberuns_section_image, 'full' );
+            } 
+            ?>
+            </div>
+        </div>
     </div>
 </section>

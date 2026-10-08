@@ -3,10 +3,24 @@
         background-size: cover !important
         padding: 100px 0
     &__intro
+        .section-uberunspage__row
+            padding-bottom: 150px
+            // Fill the first screen below the header (desktop header is ~160px tall)
+            min-height: calc(100vh - 160px)
+            min-height: calc(100svh - 160px)
+            align-content: center
         .title__bright
             margin-top: 65px
-            margin-bottom: 65px
+            margin-bottom: 25px
             text-transform: uppercase
+        .text__bright
+            max-width: 940px
+            margin: 0 auto
+            font-size: 16px
+            line-height: 1.375
+            letter-spacing: 0.01em
+            -webkit-font-smoothing: antialiased
+            -moz-osx-font-smoothing: grayscale
         .custom-container
             text-align: center
     &__about
@@ -17,30 +31,140 @@
             max-width: 400px
     &__philosophie
         background-color: #ffffff
+        .section-uberunspage__row
+            padding: 150px 0
         .title__black
             margin-top: 65px
             margin-bottom: 65px
             text-transform: uppercase
+        .text__dark
+            max-width: 960px
+            margin: 0 auto
+            font-size: 16px
+            line-height: 1.4
+            letter-spacing: 0.01em
         .custom-container
             text-align: center
     &__jobs
-        padding-bottom: 100px
+        background-color: $main-bright
+        &.has-bg-image
+            background-size: cover
+            background-position: center
+            background-repeat: no-repeat
+            .title__black, .text__dark, .text__dark a
+                color: $main-bright
+        &__container
+            padding-top: 120px
+            padding-bottom: 140px
+        &__header
+            display: flex
+            align-items: center
+            gap: 10px
+            margin-bottom: 80px
+            .title__black
+                margin: 0
+                line-height: 1
+                text-transform: uppercase
+        &__square
+            display: block
+            flex-shrink: 0
+            width: 42px
+            height: 42px
+            background-color: $main-green
+        &__text
+            padding-left: 24px
+            max-width: 464px // 440px text + 24px indent
+            font-size: 18px
+            line-height: 1.2
+            // Match Figma rendering: light text on dark bg looks too bold with subpixel smoothing
+            -webkit-font-smoothing: antialiased
+            -moz-osx-font-smoothing: grayscale
+            p
+                margin-bottom: 1.2em
+                &:last-child
+                    margin-bottom: 0
+        &__image
+            max-width: 520px
+            margin-left: auto
+            @include media-breakpoint-up(xl)
+                margin-right: -40px
+            img
+                display: block
+                width: 100%
+                height: auto
+    &__team
         background-color: $main-bright
         &__row
-            padding: 150px 0 0 0
-            .custom-container
-                text-align: center
-        .title__black
-            margin-top: 65px
+            padding: 150px 0 100px 0
+        &__header
+            display: flex
+            align-items: center
+            justify-content: center
+            gap: 12px
+            margin-bottom: 65px
+            .title__black
+                margin: 0
+                line-height: 1
+                text-transform: uppercase
+        &__square
+            display: block
+            flex-shrink: 0
+            width: 42px
+            height: 42px
+            background-color: $main-green
+        &__grid
+            max-width: 1000px
+            margin: 0 auto
+        &__col
+            display: flex
+            justify-content: center
+            margin-bottom: 110px
+
+.team-card
+    width: 100%
+    max-width: 340px
+    text-align: center
+    &__image
+        aspect-ratio: 3 / 4
+        overflow: hidden
+        margin-bottom: 25px
+        img
+            display: block
+            width: 100%
+            height: 100%
+            object-fit: cover
+    &__info
+        margin-bottom: 22px
+    &__name, &__position, &__email
+        display: block
+        font-family: $industry-font
+        font-size: 16px
+        line-height: 1.35
+        font-weight: 700
+        letter-spacing: 0.01em
+        color: $main-grey
+        margin: 0
+    &__email
+        text-decoration: none
+        transition: $main-transition
+        &:hover
+            color: $main-green
+    &__description
+        padding: 0 4px
+        &, p
+            font-family: $industry-font
+            font-size: 16px
+            line-height: 1.35
+            font-weight: 400
+            letter-spacing: 0.01em
+            color: #3a3a3a
+        p
             margin-bottom: 0
-            text-transform: uppercase
-        .text__dark
-            max-width: 400px
 
 /* RESPONSIVE */
 @include media-breakpoint-down(lg)
     .section-uberunspage
-        &__intro, &__row, &__jobs__row
+        &__intro, &__row
             .title__bright
                 left: 0
                 transform: none
@@ -55,10 +179,48 @@
         &__about
             &__row
                 padding: 50px 15px 0
-        &__jobs
-            padding-bottom: 15px
+        &__intro
+            .section-uberunspage__row
+                padding-bottom: 80px
+                // Mobile header is 76px tall
+                min-height: calc(100vh - 76px)
+                min-height: calc(100svh - 76px)
+            .title__bright
+                margin-top: 40px
+                margin-bottom: 20px
+        &__philosophie
+            .section-uberunspage__row
+                padding: 80px 15px
+        &__team
             &__row
                 padding: 50px 15px 0
+            &__header
+                margin-bottom: 40px
+                .title__black
+                    left: 0
+                    transform: none
+            &__square
+                width: 24px
+                height: 24px
+            &__col
+                margin-bottom: 50px
+        &__jobs
+            &__container
+                padding: 60px 15px
+            &__header
+                margin-bottom: 40px
+                .title__black
+                    left: 0
+                    transform: none
+            &__square
+                width: 24px
+                height: 24px
+            &__text
+                padding-left: 0
+                max-width: none
+            &__image
+                max-width: none
+                margin: 40px 0 0
 
     .section-uberunspage
         &__col-right
@@ -66,3 +228,9 @@
                 width: 100%
                 height: 100%
                 max-width: 432px
+
+@include media-breakpoint-down(sm)
+    .section-uberunspage__team__col
+        padding: 0 15px
+    .team-card
+        max-width: 340px
