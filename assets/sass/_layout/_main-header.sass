@@ -125,15 +125,16 @@
   .section.section-intro
     margin-top: 150px
 
+// Match the WP admin bar height (32px desktop, 46px at <= 782px)
 .admin-bar
   #main-header
-    top: 30px
+    top: 32px
 
 .home.page-template-page-home.admin-bar
   #main-header
     top: 32px
   #main-header.sticky
-    top: 30px
+    top: 32px
 
 // Responsive
 @include media-breakpoint-down(lg)
@@ -160,23 +161,28 @@
             padding-top: 10px
             padding-bottom: 10px
 
-  .home
-    #main-content
-      margin-top: 20px
+  // --header-height is set by sticky-header.js (76px fallback)
   #main-content
     width: 100%
-    margin-top: 76px
+    margin-top: var(--header-height, 76px)
     overflow: hidden
 
   .home.page-template-page-home
     #main-header
       top: 0px
       position: fixed
-    // Mobile header is only ~76px tall, so restore the original offset
+    // #main-content already clears the fixed header
     .section.section-intro
-      margin-top: 55px
+      margin-top: 0
 
   .home.page-template-page-home.admin-bar
     #main-header
-      top: 30px
+      top: 32px
       position: fixed
+
+@media screen and (max-width: 782px)
+  .admin-bar #main-header,
+  .admin-bar #main-header.sticky,
+  .home.page-template-page-home.admin-bar #main-header,
+  .home.page-template-page-home.admin-bar #main-header.sticky
+    top: 46px

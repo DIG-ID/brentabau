@@ -52,6 +52,11 @@
         transform: translate(-50%, -50%)
         max-width: 250px
         z-index: 2
+        transition: opacity 0.4s ease
+    // Set by hero-video.js when the video is actually playing
+    &__image.is-playing &__header_logo
+        opacity: 0
+        visibility: hidden
 
 // Respect reduced motion: hide the video and show the fallback image
 @media (prefers-reduced-motion: reduce)

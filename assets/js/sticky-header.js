@@ -1,5 +1,13 @@
 $(function() {
 
+  // Expose the real header bar height so the content offset below the fixed mobile header always matches it
+  const branding = document.querySelector('#main-header .site-branding');
+  if ( branding ) {
+    const setHeaderHeight = () => document.documentElement.style.setProperty( '--header-height', branding.offsetHeight + 'px' );
+    setHeaderHeight();
+    $(window).on( 'load resize', setHeaderHeight );
+  }
+
   if ( ! window.matchMedia('(max-width: 992px)').matches ) { // If media query not matches
     let header = $('#main-header');
     let lastScroll = 0;
