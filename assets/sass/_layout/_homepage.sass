@@ -26,9 +26,20 @@
 .section-intro
     &__image
         position: relative
+        overflow: hidden
         .size-full
             width: 100%
             height: auto
+    &__video
+        display: block
+        width: 100%
+        height: auto
+        object-fit: cover
+    // Image sets the height; video covers it and the image shows through as fallback
+    &__fallback + &__video
+        position: absolute
+        inset: 0
+        height: 100%
     &__row
         background-color: $main-grey
         padding: 50px 0
@@ -40,6 +51,12 @@
         top: 50%
         transform: translate(-50%, -50%)
         max-width: 250px
+        z-index: 2
+
+// Respect reduced motion: hide the video and show the fallback image
+@media (prefers-reduced-motion: reduce)
+    .section-intro__video
+        display: none
 
 .section-leistungen
     &__image
