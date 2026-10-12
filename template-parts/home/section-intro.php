@@ -33,7 +33,10 @@ $image_class = $video_url ? 'section-intro__fallback' : '';
                     <source src="<?php echo esc_url( $video_url ); ?>" type="<?php echo esc_attr( $video_mime ); ?>">
                 </video>
             <?php endif; ?>
-            <img class="section-intro__header_logo" src="<?php echo esc_url( wp_upload_dir()['url'] . '/brenta_home_logo.png' ); ?>" title="Brenta logo" alt="Brenta logo">
+            <?php
+            // Hero logo disabled — the branding bar is now shown in the header on the homepage too.
+            // echo '<img class="section-intro__header_logo" src="' . esc_url( wp_upload_dir()['url'] . '/brenta_home_logo.png' ) . '" title="Brenta logo" alt="Brenta logo">';
+            ?>
             </div>
         </div>
         <div class="row g-0 section-intro__row">

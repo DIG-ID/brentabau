@@ -105,7 +105,8 @@
 .home.page-template-page-home
   #main-header
     position: absolute
-    top: -95px
+    // Branding bar visible on the homepage (was -95px to hide it)
+    top: 0
     width: 100%
     .navbar
       background-color: $main-grey
@@ -120,8 +121,9 @@
     .menu-item
       a
         color: #6b6b6b
+  // Clear the full header: branding bar (95px) + nav (55px)
   .section.section-intro
-    margin-top: 55px
+    margin-top: 150px
 
 .admin-bar
   #main-header
@@ -129,7 +131,7 @@
 
 .home.page-template-page-home.admin-bar
   #main-header
-    top: -63px
+    top: 32px
   #main-header.sticky
     top: 30px
 
