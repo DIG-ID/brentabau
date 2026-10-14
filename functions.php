@@ -99,6 +99,39 @@ function brn_theme_enqueue_styles() {
 
 add_action( 'wp_enqueue_scripts', 'brn_theme_enqueue_styles' );
 
+/**
+ * Check if the current page renders a Contact Form 7 form.
+ */
+function brn_page_has_form() {
+	// Templates that output a CF7 form via an ACF shortcode field.
+	if ( is_page_template( array( 'page-templates/page-contact.php', 'page-templates/page-leistungen.php' ) ) ) {
+		return true;
+	}
+
+	// Fallback: a form shortcode placed directly in the page content.
+	if ( is_singular() ) {
+		$post = get_post();
+		if ( $post && has_shortcode( $post->post_content, 'contact-form-7' ) ) {
+			return true;
+		}
+	}
+
+	return false;
+}
+
+/**
+ * Only load reCAPTCHA on pages that have a form.
+ * Runs after CF7 enqueues it (priority 20).
+ */
+function brn_dequeue_recaptcha() {
+	if ( brn_page_has_form() ) {
+		return;
+	}
+	wp_dequeue_script( 'wpcf7-recaptcha' );
+	wp_dequeue_script( 'google-recaptcha' );
+}
+add_action( 'wp_enqueue_scripts', 'brn_dequeue_recaptcha', 21 );
+
 // Google maps
 function my_acf_init() {
 	acf_update_setting( 'google_api_key', 'AIzaSyBAZN5TfX1aWmjodZ4e_6sOcaJV4D59jfo' );
