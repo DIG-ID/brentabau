@@ -59,17 +59,28 @@
         justify-content: center
         height: 100%
         background-color: $main-green
+    // Card column: the text box grows so boxes in the same row share a height
+    &.col-12
+        display: flex
+        flex-direction: column
     &__wrapper
         position: relative
+        display: flex
+        flex-direction: column
+        flex-grow: 1
         padding: 30px
         background-color: #ffffff
         border-bottom: 4px solid $main-green
         min-height: 400px
         .btn__white
             background-color: #ffffff
-            position: absolute
-            left: 30px
-            bottom: 30px
+            // Pushed to the bottom of the box, but always after the text
+            align-self: flex-start
+            margin-top: auto
+    &__text
+        margin-bottom: 30px
+        p:last-child
+            margin-bottom: 0
 
 
 /* SINGLE PROJEKTE*/
@@ -160,10 +171,7 @@
         &__category
             font-size: 18px
         &__wrapper
-            .btn__white
-                position: relative
-                left: 0
-                bottom: 0
+            min-height: 0
 
     .projekte-single
         &__title

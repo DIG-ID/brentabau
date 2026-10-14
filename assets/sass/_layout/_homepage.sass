@@ -1,14 +1,3 @@
-.home
-    .title__black, .title__bright
-        &::before
-            content: ""
-            position: absolute
-            bottom: 14px
-            left:-40px
-            height: 46px
-            width: 46px
-            background-color: $main-green
-
 .btn__green.abso
     float: right
     position: fixed
@@ -76,9 +65,10 @@
         padding: 0
     &__col-left
         padding: 100px 80px
+        .title-square
+            margin-bottom: 100px
         .title__black
             text-transform: uppercase
-            margin-bottom: 100px
         .text__dark
             max-width: 370px
     &__col-right
@@ -108,9 +98,10 @@
     &__row
         background-size: cover !important
         padding: 100px 0
+    .title-square
+        margin-bottom: 150px
     .title__bright
         text-transform: uppercase
-        margin-bottom: 150px
     .text__bright
         max-width: 370px
     &__col-right
@@ -136,9 +127,10 @@
         padding: 100px 0px 200px 0
     &__col-left
         padding: 0 80px
+        .title-square
+            margin-bottom: 100px
         .title__black
             text-transform: uppercase
-            margin-bottom: 100px
         .text__dark
             max-width: 370px
     &__col-right
@@ -173,7 +165,7 @@
     .section-leistungen
         &__col-left
             padding: 40px 15px 50px
-            .title__black
+            .title-square
                 margin-bottom: 50px
             .text__dark
                 margin: 0 auto 50px auto
@@ -201,7 +193,7 @@
             margin-top: 20px
             .column__wrapper
                 text-align: center
-        .title__bright
+        .title-square
             margin-bottom: 50px
         .text__bright
             margin: 0 auto 50px auto
@@ -214,7 +206,7 @@
             .column__wrapper
                 float: none
                 margin-bottom: 40px
-            .title__black
+            .title-square
                 margin-bottom: 50px
             .text__dark
                 margin: 0 auto 50px auto
@@ -234,11 +226,3 @@
     .section-partnersmap
         &__row
             padding: 40px 15px 50px
-
-    .home
-        .title__black::before,
-        .title__bright::before
-            bottom: 5px
-            left: -21px
-            height: 24px
-            width: 24px

@@ -46,6 +46,22 @@ body
         color: $main-bright
         position: relative
 
+// Section title with a green square in front (same pattern as the Über uns team/jobs headers).
+// Spacing below the title goes on .title-square, not on the h2, so the square stays centred on the text.
+.title-square
+    display: flex
+    align-items: center
+    gap: 12px
+    .title__black, .title__bright
+        margin: 0
+        line-height: 1
+    &__square
+        display: block
+        flex-shrink: 0
+        width: 42px
+        height: 42px
+        background-color: $main-green
+
 .text
     &__bright
         font-family: $industry-font
@@ -138,6 +154,16 @@ body
         display: inline-block
         left: 50%
         transform: translateX(-50%)
+
+    // Centred on mobile, like the other titles; flex handles centring so drop the translate
+    .title-square
+        justify-content: center
+        .title__black, .title__bright
+            left: 0
+            transform: none
+        &__square
+            width: 24px
+            height: 24px
     
     .page
         &__title
@@ -147,3 +173,8 @@ body
     .page
         &__title
             font-size: 26px
+
+@include media-breakpoint-down(sm)
+    .title-square__square
+        width: 20px
+        height: 20px

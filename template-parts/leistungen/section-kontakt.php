@@ -4,7 +4,10 @@
             <div class="custom-container">
                 <div class="row g-0">
                     <div class="col-12">
-                        <h2 class="title__black"><?php the_field('section_kontakt_title'); ?></h2>
+                        <div class="title-square">
+                            <span class="title-square__square" aria-hidden="true"></span>
+                            <h2 class="title__black"><?php the_field('section_kontakt_title'); ?></h2>
+                        </div>
                     </div>
                 </div>
                 <div class="row g-0">

@@ -13,7 +13,7 @@
 
                 // Setup this post for WP functions (variable must be named $post).
                 setup_postdata($post); ?>
-                <div class="col-12 col-lg-6">
+                <div class="col-12 col-lg-6 projekte-thumb">
                         <div class="projekte-thumb__head">
                             <div class="container"><div class="row projekte-thumb__row">
                                 <div class="col-8 projekte-thumb__col1"><p class="projekte-thumb__title"><?php the_title(); ?></p></div>
@@ -27,7 +27,7 @@
                         </div>
                         <?php endif; ?>
                         <div class="projekte-thumb__wrapper">
-                            <p class="text__dark"><?php the_field('description'); ?></p>
+                            <div class="text__dark projekte-thumb__text"><?php the_field( 'description' ); ?></div>
                             <a href="<?php the_permalink(); ?>" class="btn btn__white"><?php esc_html_e( 'Mehr Erfahren', 'brenta' ); ?></a>
                         </div>
                     </div>
