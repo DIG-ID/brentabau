@@ -100,6 +100,66 @@ function brn_theme_enqueue_styles() {
 add_action( 'wp_enqueue_scripts', 'brn_theme_enqueue_styles' );
 
 /**
+ * Login screen: show the client logo (Customizer > Site Identity > Logo).
+ * The logo is white, so the page gets the dark brand background.
+ */
+function brn_login_logo() {
+	$logo_id  = get_theme_mod( 'custom_logo' );
+	$logo_url = $logo_id ? wp_get_attachment_image_url( $logo_id, 'full' ) : '';
+	?>
+	<style>
+		body.login {
+			background-color: #222222;
+		}
+		<?php if ( $logo_url ) : ?>
+		body.login h1 a {
+			background-image: url('<?php echo esc_url( $logo_url ); ?>');
+			background-size: contain;
+			background-position: center;
+			width: 280px;
+			height: 80px;
+		}
+		<?php endif; ?>
+		body.login #nav a,
+		body.login #backtoblog a,
+		body.login .privacy-policy-page-link a,
+		body.login .language-switcher label {
+			color: #e9e9e9;
+		}
+		body.login #nav a:hover,
+		body.login #backtoblog a:hover {
+			color: #00bb00;
+		}
+		body.login .button-primary {
+			background-color: #00bb00;
+			border-color: #00bb00;
+			color: #222222;
+		}
+		body.login .button-primary:hover,
+		body.login .button-primary:focus {
+			background-color: #009900;
+			border-color: #009900;
+			color: #ffffff;
+		}
+	</style>
+	<?php
+}
+add_action( 'login_enqueue_scripts', 'brn_login_logo' );
+
+/**
+ * Login logo links to the site instead of wordpress.org.
+ */
+function brn_login_logo_url() {
+	return home_url( '/' );
+}
+add_filter( 'login_headerurl', 'brn_login_logo_url' );
+
+function brn_login_logo_title() {
+	return get_bloginfo( 'name' );
+}
+add_filter( 'login_headertext', 'brn_login_logo_title' );
+
+/**
  * Enable the excerpt box on Projekte (used on the Projekte overview cards).
  */
 function brn_projekte_excerpt_support() {
