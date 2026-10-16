@@ -47,6 +47,21 @@
         opacity: 0
         visibility: hidden
 
+// Desktop: hero fills the screen below the header (branding bar 95px + nav 55px)
+@include media-breakpoint-up(lg)
+    .section-intro__image
+        height: calc(100vh - 150px)
+        height: calc(100svh - 150px)
+        min-height: 450px
+        .size-full, .section-intro__video
+            width: 100%
+            height: 100%
+            object-fit: cover
+    // Logged in: the WP admin bar takes another 32px
+    .admin-bar .section-intro__image
+        height: calc(100vh - 182px)
+        height: calc(100svh - 182px)
+
 // Respect reduced motion: hide the video and show the fallback image
 @media (prefers-reduced-motion: reduce)
     .section-intro__video

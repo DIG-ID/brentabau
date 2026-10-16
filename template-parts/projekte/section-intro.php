@@ -36,7 +36,14 @@
                         </div>
                         <?php endif; ?>
                         <div class="projekte-thumb__wrapper">
-                            <div class="text__dark projekte-thumb__text"><?php the_field( 'description' ); ?></div>
+                            <?php // Manual excerpt first; fall back to the full ACF description. ?>
+                            <div class="text__dark projekte-thumb__text">
+                                <?php if ( has_excerpt() ) : ?>
+                                <p><?php echo esc_html( get_the_excerpt() ); ?></p>
+                                <?php else : ?>
+                                <?php echo wp_kses_post( get_field( 'description' ) ); ?>
+                                <?php endif; ?>
+                            </div>
                             <a href="<?php the_permalink(); ?>" class="btn btn__white"><?php esc_html_e( 'Mehr Erfahren', 'brenta' ); ?></a>
                         </div>
                     </div>

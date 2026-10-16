@@ -100,6 +100,14 @@ function brn_theme_enqueue_styles() {
 add_action( 'wp_enqueue_scripts', 'brn_theme_enqueue_styles' );
 
 /**
+ * Enable the excerpt box on Projekte (used on the Projekte overview cards).
+ */
+function brn_projekte_excerpt_support() {
+	add_post_type_support( 'projekte', 'excerpt' );
+}
+add_action( 'init', 'brn_projekte_excerpt_support', 20 );
+
+/**
  * Check if the current page renders a Contact Form 7 form.
  */
 function brn_page_has_form() {
