@@ -1,0 +1,100 @@
+.section-faq
+    &__intro-row
+        padding: 100px 0 150px 0
+    &__list
+        padding: 100px 0
+        background-color: $main-bright
+        position: relative
+        // Same diagonal edge as the Projekte overview
+        &::before
+            content: ""
+            position: absolute
+            top: -100px
+            width: 0
+            height: 0
+            border-style: solid
+            border-width: 0px 40px 100px 100vw
+            border-color: transparent transparent $main-bright transparent
+
+.faq-item
+    margin-bottom: 30px
+    &:last-child
+        margin-bottom: 0
+    &__head
+        display: flex
+        align-items: stretch
+        width: 100%
+        min-height: 75px
+        padding: 0
+        border: 0
+        text-align: left
+        background-color: $main-grey
+        cursor: pointer
+        &:focus-visible
+            outline: 3px solid $main-green
+            outline-offset: 3px
+    &__question
+        flex: 1
+        display: flex
+        align-items: center
+        padding: 18px 30px
+        font-family: $nimbus-font
+        font-size: 24px
+        font-weight: bold
+        line-height: 1.25
+        color: $main-bright
+    &__toggle
+        flex-shrink: 0
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 120px
+        background-color: $main-green
+        color: $main-grey
+        transition: $main-transition
+    &__head:hover &__toggle
+        background-color: darken($main-green, 6%)
+    &__arrow
+        width: 28px
+        height: 28px
+        transition: transform 0.35s ease
+    // Bootstrap toggles aria-expanded on open/close
+    &__head[aria-expanded="true"] &__arrow
+        transform: rotate(180deg)
+    &__answer
+        padding: 30px
+        background-color: #ffffff
+        border-bottom: 4px solid $main-green
+        font-size: 16px
+        line-height: 1.5
+        p:last-child, ul:last-child, ol:last-child
+            margin-bottom: 0
+
+@media (prefers-reduced-motion: reduce)
+    .faq-item__arrow
+        transition: none
+
+/* RESPONSIVE */
+@include media-breakpoint-down(lg)
+    .section-faq
+        &__intro-row
+            padding: 50px 15px 100px
+        &__list
+            padding: 60px 15px
+
+@include media-breakpoint-down(sm)
+    .faq-item
+        margin-bottom: 20px
+        &__head
+            min-height: 60px
+        &__question
+            padding: 14px 18px
+            font-size: 18px
+        &__toggle
+            width: 60px
+        &__arrow
+            width: 22px
+            height: 22px
+        &__answer
+            padding: 20px 18px
+            font-size: 15px
