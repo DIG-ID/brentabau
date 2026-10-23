@@ -75,12 +75,23 @@
         transition: none
 
 /* RESPONSIVE */
+// Matches the Projekte overview on tablet/mobile
 @include media-breakpoint-down(lg)
     .section-faq
         &__intro-row
-            padding: 50px 15px 100px
+            padding: 60px 0 50px 0
         &__list
-            padding: 60px 15px
+            // Hides the diagonal edge, like Projekte
+            overflow: hidden
+            padding: 60px 0
+    .faq-item
+        &__question
+            font-size: 22px
+
+@include media-breakpoint-down(md)
+    .faq-item
+        &__question
+            font-size: 18px
 
 @include media-breakpoint-down(sm)
     .faq-item
@@ -89,7 +100,6 @@
             min-height: 60px
         &__question
             padding: 14px 18px
-            font-size: 18px
         &__toggle
             width: 60px
         &__arrow
