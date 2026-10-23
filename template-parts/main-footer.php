@@ -23,7 +23,8 @@
 				<div class="col col-12 col-lg-3 footer__col">
 					<div class="footer__text">
 					<p>
-						<a id="footer-impressum" href="https://brentabau.ch/impressum/"><?php _e('Impressum','brenta'); ?></a>
+						<a id="footer-impressum" href="https://brentabau.ch/impressum/"><?php _e('Impressum','brenta'); ?></a><br>
+						<a id="footer-faq" href="<?php echo esc_url( home_url( '/faq/' ) ); ?>"><?php esc_html_e( 'FAQ', 'brenta' ); ?></a>
 						<?php do_action( 'socials' ); ?>
 					</p>
 					</div>
