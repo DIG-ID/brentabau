@@ -17,7 +17,7 @@
 				<div class="col col-12 col-lg-3 footer__col">
 					<div class="footer__text">
 						<p>Tel: <a href="tel://0041 79 629 26 13">+41 79 629 26 13</a></p>
-						<p>Mail: <a href="">info[at]brentabau.ch</a></p>
+						<p>Mail: <a href="">info@brentabau.ch</a></p>
 					</div>
 				</div>
 				<div class="col col-12 col-lg-3 footer__col">
